@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head> 
+  <meta charset="utf-8"> 
+  <link rel="stylesheet" href="css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css"> 
+  <link rel="stylesheet" href="css/bootstrap-reboot.min.css"> 
+  <link rel="stylesheet" href="css/prism.css"> 
+  <link rel="stylesheet" href="css/styles.css"> 
+  <script type="application/javascript" src="js/jquery-3.4.1.min.js"></script> 
+  <script type="application/javascript" src="js/bootstrap.bundle.min.js"></script> 
+  <script type="application/javascript" src="js/prism.js"></script> 
+  <script type="application/javascript" src="js/app.js"></script> 
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png"> 
+  <link rel="apple-touch-icon" href="images/apple-touch-icon-152x152.png"> 
+  <title>Documentation Maven Plugin</title> 
+ </head> 
+ <body> 
+  <header class="row no-gutters"> 
+   <div class="col-lg-9 title-container"> 
+    <h1>Documentation Maven Plugin</h1> 
+   </div> 
+   <div class="col-md-3 logo-container d-none d-lg-block"> 
+    <img src="data:image/png;base64,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TTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6ZjM3NThhNDItZjcyNC00OTAzLWJmNDctOWZjMDExMGNiMjg1IgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmFkYjY5ZWE1LTIyOWMtNDgyNy1iZTg3LTY4MWFmNDM1NTM5MCIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmM4MmY3YmQxLTE4YmQtNDNmNC1hNzI3LThjNjlkYWViNjkxYyIKICAgR0lNUDpBUEk9IjIuMCIKICAgR0lNUDpQbGF0Zm9ybT0iTWFjIE9TIgogICBHSU1QOlRpbWVTdGFtcD0iMTU2OTMzNTEyODYyNzM2OCIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjEyIgogICBkYzpGb3JtYXQ9ImltYWdlL3BuZyIKICAgeG1wOkNyZWF0b3JUb29sPSJHSU1QIDIuMTAiCiAgIHhtcDpJQ0ZPQXNzZXRUeXBlPSJMb2dvIgogICB4bXA6TmV4dEFzc2V0VHlwZT0iTG9nbyI+CiAgIDxpcHRjRXh0OkxvY2F0aW9uQ3JlYXRlZD4KICAgIDxyZGY6QmFnLz4KICAgPC9pcHRjRXh0OkxvY2F0aW9uQ3JlYXRlZD4KICAgPGlwdGNFeHQ6TG9jYXRpb25TaG93bj4KICAgIDxyZGY6QmFnLz4KICAgPC9pcHRjRXh0OkxvY2F0aW9uU2hvd24+CiAgIDxpcHRjRXh0OkFydHdvcmtPck9iamVjdD4KICAgIDxyZGY6QmFnLz4KICAgPC9pcHRjRXh0OkFydHdvcmtPck9iamVjdD4KICAgPGlwdGNFeHQ6UmVnaXN0cnlJZD4KICAgIDxyZGY6QmFnLz4KICAgPC9pcHRjRXh0OlJlZ2lzdHJ5SWQ+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpTZXE+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InNhdmVkIgogICAgICBzdEV2dDpjaGFuZ2VkPSIvIgogICAgICBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmZhYzNiMzJmLTFlMjgtNDM4NS1hMjZlLWJlNmVhODBjNzg3YyIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iR2ltcCAyLjEwIChNYWMgT1MpIgogICAgICBzdEV2dDp3aGVuPSIyMDE5LTA5LTI0VDA5OjI1OjI4LTA1OjAwIi8+CiAgICA8L3JkZjpTZXE+CiAgIDwveG1wTU06SGlzdG9yeT4KICAgPHBsdXM6SW1hZ2VTdXBwbGllcj4KICAgIDxyZGY6U2VxLz4KICAgPC9wbHVzOkltYWdlU3VwcGxpZXI+CiAgIDxwbHVzOkltYWdlQ3JlYXRvcj4KICAgIDxyZGY6U2VxLz4KICAgPC9wbHVzOkltYWdlQ3JlYXRvcj4KICAgPHBsdXM6Q29weXJpZ2h0T3duZXI+CiAgICA8cmRmOlNlcS8+CiAgIDwvcGx1czpDb3B5cmlnaHRPd25lcj4KICAgPHBsdXM6TGljZW5zb3I+CiAgICA8cmRmOlNlcS8+CiAgIDwvcGx1czpMaWNlbnNvcj4KICAgPGRjOmRlc2NyaXB0aW9uPgogICAgPHJkZjpBbHQ+CiAgICAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ij5JQ0YgTmV4dCBMb2dvPC9yZGY6bGk+CiAgICA8L3JkZjpBbHQ+CiAgIDwvZGM6ZGVzY3JpcHRpb24+CiAgIDxkYzpzdWJqZWN0PgogICAgPHJkZjpCYWc+CiAgICAgPHJkZjpsaT5CcmFuZCBBc3NldHMsIElDRiBOZXh0LCBJQ0YgTmV4dCBMb2dvLCBJQ0YgTmV4dCBSR0IgTG9nbywgSUNGIE5leHQgVmVydGljYWwgTG9nbywgSUNGIE5leHQgVmVydGljYWwgUkdCIExvZ28sIElDRk5leHRfTG9nb19WZXJ0aWNhbF9SR0JfV2hpdGUucG5nLCBMb2dvcywgUE5HLCBWZXJpdGNhbDwvcmRmOmxpPgogICAgPC9yZGY6QmFnPgogICA8L2RjOnN1YmplY3Q+CiAgPC9yZGY6RGVzY3JpcHRpb24+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAg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"> 
+   </div> 
+  </header> 
+  <article class="row no-gutters"> 
+   <aside class="col-lg-3"> 
+    <nav>
+     <h4>Contents</h4>
+     <ol>
+      <li><a href="#section-1">Introduction</a></li>
+      <li><a href="#section-2">Purpose</a></li>
+      <li><a href="#section-3">Usage</a>
+       <ol>
+        <li><a href="#section-3.1">Goals</a></li>
+        <li><a href="#section-3.2">Configuration</a></li>
+        <li><a href="#section-3.3">Example Usage</a></li>
+       </ol></li>
+     </ol>
+    </nav> 
+   </aside> 
+   <section class="col-lg-9"> 
+    <main> 
+     <h2 id="section-1">Introduction</h2> 
+     <p>The Markdown Docs Maven Plugin is used to generate HTML pages (like this one) from markdown source files. It is intended to facilitate the maintenance of documentation artifacts stored within the codebase, as Markdown. The plugin performs a series of tasks that convert the Markdown into HTML pages that can be deployed alongside your code (or wherever you choose).</p> 
+     <h2 id="section-2">Purpose</h2> 
+     <p>The goal of the plugin is to allow teams to create documentation that is both beautiful and maintainable.</p> 
+     <p>We believe that documentation artifacts work best when stored as part of a project's source control. This allows code lifecycle processes, like pull requests, to be extended to documentation, helping teams ensure that documentation updates happen alongside the code changes that necessitate them.</p> 
+     <p>Repository-based documentation is best stored as flat files, in order to make changes visible from file diffs. However, the end result is often less beautiful and usable than a PDF or webpage. This plugin seeks to bridge that gap, allowing teams to maintain flat files in the repository, and then transform them into rich documentation artifacts via a series of configurable build steps.</p> 
+     <h2 id="section-3">Usage</h2> 
+     <h3 id="section-3.1">Goals</h3> 
+     <p>The plugin exposes 4 Maven goals:</p> 
+     <h4>Markdown to HTML</h4> 
+     <p>The <code>markdown-to-html</code> goal takes markdown files from a source directory, and generates corresponding HTML files in the target directory. Although only body content is generated from the Markdown, the goal allows the specification of header and footer HTML fragment files. These fragments can specify CSS, JS, and static assets.</p> 
+     <h4>Copy Frontend Artifacts</h4> 
+     <p>The <code>copy-frontend-artifacts</code> goal copies static artifacts into the target directory for use by the generated HTML pages.</p> 
+     <h4>Transform HTML</h4> 
+     <p>The <code>transform-html</code> goal applies a series of transformers to HTML documents. This allows the addition of structure to the plain content markup generated by the <code>markdown-to-html</code> goal. As an example, <code>com.icfnext.documentation.plugin.html.IcfNextTransformer</code> was used to create the header, footer, and left rail shown on this page.</p> 
+     <h4>Add Table of Contents</h4> 
+     <p>The <code>add-table-of-contents</code> plugin scans HTML documents for headings, and generates markup for a table of contents, which is then inserted into the document.</p> 
+     <h3 id="section-3.2">Configuration</h3> 
+     <h4>Shared Properties</h4> 
+     <p>The following configurations are shared between all goals.</p> 
+     <table> 
+      <thead> 
+       <tr> 
+        <td>Property</td> 
+        <td>Type</td> 
+        <td>Required</td> 
+        <td>Default</td> 
+        <td>Description</td> 
+       </tr> 
+      </thead> 
+      <tbody> 
+       <tr> 
+        <td><code>baseDir</code></td> 
+        <td>String (path)</td> 
+        <td><code>true</code></td> 
+        <td>-</td> 
+        <td>The directory in which the plugin will scan for files.When generating HTML from markdown, this will generally be under <code>src</code>, whereas subsequent steps will generally be under <code>target</code>.</td> 
+       </tr> 
+       <tr> 
+        <td><code>failOnError</code></td> 
+        <td>boolean</td> 
+        <td><code>false</code></td> 
+        <td><code>true</code></td> 
+        <td>Whether the plugin should halt the build if a (recoverable) error is encountered.</td> 
+       </tr> 
+       <tr> 
+        <td><code>recursive</code></td> 
+        <td>boolean</td> 
+        <td><code>false</code></td> 
+        <td><code>true</code></td> 
+        <td>Whether to continue search for applicable files inside any directories encountered under the <code>baseDir</code></td> 
+       </tr> 
+       <tr> 
+        <td><code>outputDir</code></td> 
+        <td>String (path)</td> 
+        <td><code>false</code></td> 
+        <td><code>${project.outputDirectory}</code></td> 
+        <td>The directory into which files should be written. When <code>recursive</code> = <code>true</code>, output files will be placed relative to their corresponding input files</td> 
+       </tr> 
+      </tbody> 
+      <tbody></tbody> 
+     </table> 
+     <h4>Markdown to HTML</h4> 
+     <table> 
+      <thead> 
+       <tr> 
+        <td>Property</td> 
+        <td>Type</td> 
+        <td>Required</td> 
+        <td>Default</td> 
+        <td>Description</td> 
+       </tr> 
+      </thead> 
+      <tbody> 
+       <tr> 
+        <td><code>fixMarkdownLinks</code></td> 
+        <td>boolean</td> 
+        <td><code>false</code></td> 
+        <td><code>true</code></td> 
+        <td>If true, when generating HTML from Markdown, any links to local Markdown files will be adjusted to point to the corresponding HTML file.</td> 
+       </tr> 
+       <tr> 
+        <td><code>fileMask</code></td> 
+        <td>String</td> 
+        <td><code>false</code></td> 
+        <td><code>*.md</code></td> 
+        <td>A filter specifying which files should be converted to HTML</td> 
+       </tr> 
+       <tr> 
+        <td><code>headerHtmlFile</code></td> 
+        <td>String (path)</td> 
+        <td><code>false</code></td> 
+        <td> </td> 
+        <td>Specifies a file to include before the generated content in the output HTML. At minimum, this file should include the opening <code>html</code> and <code>body</code> tags.</td> 
+       </tr> 
+       <tr> 
+        <td><code>footerHtmlFile</code></td> 
+        <td>String (path)</td> 
+        <td><code>false</code></td> 
+        <td> </td> 
+        <td>Specifies a file to include after the generated content in the output HTML. At minimum, this file should include the closing <code>body</code> and <code>html</code> tags.</td> 
+       </tr> 
+      </tbody> 
+      <tbody></tbody> 
+     </table> 
+     <h4>Copy Frontend Artifacts</h4> 
+     <table> 
+      <thead> 
+       <tr> 
+        <td>Property</td> 
+        <td>Type</td> 
+        <td>Required</td> 
+        <td>Default</td> 
+        <td>Description</td> 
+       </tr> 
+      </thead> 
+      <tbody> 
+       <tr> 
+        <td><code>fileMask</code></td> 
+        <td>String</td> 
+        <td><code>false</code></td> 
+        <td><code>*</code></td> 
+        <td>A filter specifying which files should be copied</td> 
+       </tr> 
+      </tbody> 
+      <tbody></tbody> 
+     </table> 
+     <h4>Transform HTML</h4> 
+     <table> 
+      <thead> 
+       <tr> 
+        <td>Property</td> 
+        <td>Type</td> 
+        <td>Required</td> 
+        <td>Default</td> 
+        <td>Description</td> 
+       </tr> 
+      </thead> 
+      <tbody> 
+       <tr> 
+        <td><code>transformers</code></td> 
+        <td>List&lt;String&gt;</td> 
+        <td>true</td> 
+        <td>-</td> 
+        <td>A list of classes implementing the <code>com.icfnext.docs.plugin.html.HtmlTransformer</code> interface. The <code>transform</code> method on this class takes a JSoup <code>Document</code> object, which it can transform as needed. Once all specified transformers have been called, the document will be written back to the file system.</td> 
+       </tr> 
+      </tbody> 
+      <tbody></tbody> 
+     </table> 
+     <h4>Add Table of Contents</h4> 
+     <table> 
+      <thead> 
+       <tr> 
+        <td>Property</td> 
+        <td>Type</td> 
+        <td>Required</td> 
+        <td>Default</td> 
+        <td>Description</td> 
+       </tr> 
+      </thead> 
+      <tbody> 
+       <tr> 
+        <td><code>excludeH1</code></td> 
+        <td>boolean</td> 
+        <td>false</td> 
+        <td>true</td> 
+        <td>Whether H1 should be excluded to the ToC</td> 
+       </tr> 
+       <tr> 
+        <td><code>LevelsToInclude</code></td> 
+        <td>int</td> 
+        <td>false</td> 
+        <td>3</td> 
+        <td>How many heading levels should be included in the ToC</td> 
+       </tr> 
+       <tr> 
+        <td><code>targetSelector</code></td> 
+        <td>String</td> 
+        <td>false</td> 
+        <td>"nav"</td> 
+        <td>A CSS selector used to locate the element into which the ToC markup will be inserted</td> 
+       </tr> 
+       <tr> 
+        <td><code>title</code></td> 
+        <td>String</td> 
+        <td>false</td> 
+        <td>-</td> 
+        <td>The title text to insert before the ToC markup (e.g., "Contents")</td> 
+       </tr> 
+       <tr> 
+        <td><code>titleTag</code></td> 
+        <td>String</td> 
+        <td>false</td> 
+        <td>"h4"</td> 
+        <td>The tag used to wrap the title (used only when <code>title</code> is supplied).</td> 
+       </tr> 
+      </tbody> 
+      <tbody></tbody> 
+     </table> 
+     <h3 id="section-3.3">Example Usage</h3> 
+     <p>Example usage can be found in the <code>documentation-maven-plugin-documentation</code> module (which generated this page). The plugin is configured with a separate execution for each of the goals.</p> 
+     <pre><code class="language-xml">  &lt;build&gt;
+    &lt;plugins&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;com.icfnext.documentation&lt;/groupId&gt;
+        &lt;artifactId&gt;doocumentation-maven-plugin&lt;/artifactId&gt;
+        &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;
+        &lt;dependencies&gt;
+          &lt;dependency&gt;
+            &lt;groupId&gt;com.vladsch.flexmark&lt;/groupId&gt;
+            &lt;artifactId&gt;flexmark-all&lt;/artifactId&gt;
+            &lt;version&gt;0.50.40&lt;/version&gt;
+          &lt;/dependency&gt;
+          &lt;dependency&gt;
+            &lt;groupId&gt;org.jsoup&lt;/groupId&gt;
+            &lt;artifactId&gt;jsoup&lt;/artifactId&gt;
+            &lt;version&gt;1.12.1&lt;/version&gt;
+          &lt;/dependency&gt;
+          &lt;dependency&gt;
+            &lt;groupId&gt;com.google.guava&lt;/groupId&gt;
+            &lt;artifactId&gt;guava&lt;/artifactId&gt;
+            &lt;version&gt;28.1-jre&lt;/version&gt;
+          &lt;/dependency&gt;
+        &lt;/dependencies&gt;
+        &lt;configuration&gt;
+          &lt;baseDir&gt;target/html&lt;/baseDir&gt;
+          &lt;outputDir&gt;target/html&lt;/outputDir&gt;
+        &lt;/configuration&gt;
+        &lt;executions&gt;
+          &lt;execution&gt;
+            &lt;id&gt;generate-html&lt;/id&gt;
+            &lt;phase&gt;process-resources&lt;/phase&gt;
+            &lt;goals&gt;
+              &lt;goal&gt;markdown-to-html&lt;/goal&gt;
+            &lt;/goals&gt;
+            &lt;configuration&gt;
+              &lt;baseDir&gt;docs&lt;/baseDir&gt;
+              &lt;headerHtmlFile&gt;${project.basedir}/src/main/resources/header.html&lt;/headerHtmlFile&gt;
+              &lt;footerHtmlFile&gt;${project.basedir}/src/main/resources/footer.html&lt;/footerHtmlFile&gt;
+            &lt;/configuration&gt;
+          &lt;/execution&gt;
+          &lt;execution&gt;
+            &lt;id&gt;copy-frontend-artifacts&lt;/id&gt;
+            &lt;phase&gt;process-resources&lt;/phase&gt;
+            &lt;goals&gt;
+              &lt;goal&gt;copy-frontend-artifacts&lt;/goal&gt;
+            &lt;/goals&gt;
+            &lt;configuration&gt;
+              &lt;baseDir&gt;src/main/resources/static&lt;/baseDir&gt;
+            &lt;/configuration&gt;
+          &lt;/execution&gt;
+          &lt;execution&gt;
+            &lt;id&gt;transform-html&lt;/id&gt;
+            &lt;phase&gt;process-resources&lt;/phase&gt;
+            &lt;goals&gt;
+              &lt;goal&gt;transform-html&lt;/goal&gt;
+            &lt;/goals&gt;
+            &lt;configuration&gt;
+              &lt;transformers&gt;
+                &lt;transformer&gt;com.icfnext.documentation.plugin.html.IcfNextTransformer&lt;/transformer&gt;
+              &lt;/transformers&gt;
+            &lt;/configuration&gt;
+          &lt;/execution&gt;
+          &lt;execution&gt;
+            &lt;id&gt;add-toc&lt;/id&gt;
+            &lt;phase&gt;process-resources&lt;/phase&gt;
+            &lt;goals&gt;
+              &lt;goal&gt;add-table-of-contents&lt;/goal&gt;
+            &lt;/goals&gt;
+            &lt;configuration&gt;
+              &lt;title&gt;Contents&lt;/title&gt;
+              &lt;levelsToInclude&gt;2&lt;/levelsToInclude&gt;
+            &lt;/configuration&gt;
+          &lt;/execution&gt;
+        &lt;/executions&gt;
+      &lt;/plugin&gt;
+    &lt;/plugins&gt;
+  &lt;/build&gt;
+</code></pre> 
+    </main> 
+   </section> 
+  </article> 
+  <footer class="row no-gutters"> 
+   <div>
+     Copyright 2019 ICF Next 
+   </div> 
+  </footer>  
+ </body>
+</html>
