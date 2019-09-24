@@ -1,0 +1,112 @@
+body {
+    font-family: 'Avenir';
+}
+header {
+    color: white;
+    background: rgb(245,130,32);
+    background: -moz-linear-gradient(90deg, rgba(245,130,32,1) 100%, rgba(237,6,119,1) 0%);
+    background: -webkit-linear-gradient(90deg, rgba(245,130,32,1) 0%, rgba(237,6,119,1) 100%);
+    background: linear-gradient(90deg, rgba(245,130,32,1) 0%, rgba(237,6,119,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f58220",endColorstr="#ed0677",GradientType=1);
+}
+.logo-container {
+    padding: 50px 0;
+    text-align: center;
+}
+.logo-container img {
+    margin: auto;
+    max-width: 50%;
+    height: auto;
+}
+.title-container {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: auto 20px;
+}
+.title-container h1 {
+    color: #FFFFFF;
+}
+.title-container h2 {
+    font-weight: 400;
+    color: #000000;
+    margin-top: 10px;
+    margin-left: 140px;
+}
+.title-container * {
+    margin-left: 100px;
+}
+aside {
+    background-color: black;
+    color: #ED0677;
+}
+nav {
+    margin: 40px;
+}
+main {
+    padding: 0 100px;
+    margin-bottom: 100px;
+}
+h1 {
+    color: #ED0677;
+    font-weight: 700;
+    font-size: 64px;
+}
+h2 {
+    margin-top: 40px;
+    color: #ED0677;
+    font-weight: 700;
+    font-size: 32px;
+}
+h3 {
+    margin: 30px 0;
+    font-weight: 500;
+    font-size: 24px;
+}
+h4 {
+    font-weight: 600;
+    font-size: 20px;
+}
+code {
+    color: #004185;
+}
+nav a:link {
+    color: #FFFFFF;
+}
+nav a:visited {
+    color: #FFFFFF;
+}
+ol ol {
+    list-style-type: lower-alpha;
+}
+footer {
+    color: #FFFFFF;
+    background: rgb(237,6,119);
+    background: -moz-linear-gradient(90deg, rgba(237,6,119,1) 0%, rgba(245,130,32,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(237,6,119,1) 0%, rgba(245,130,32,1) 100%);
+    background: linear-gradient(90deg, rgba(237,6,119,1) 0%, rgba(245,130,32,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ed0677",endColorstr="#f58220",GradientType=1);
+    padding: 40px;
+    min-height: 100px;
+}
+footer div {
+    text-align: right;
+    width: 100%;
+}
+tr {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+td:not(:first-child) {
+    border-left: 1px solid black;
+}
+td {
+    padding: 10px;
+}
+thead {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+table {
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
