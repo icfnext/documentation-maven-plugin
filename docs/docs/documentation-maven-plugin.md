@@ -75,7 +75,7 @@ Example usage can be found in the `documentation-maven-plugin-documentation` mod
     <plugins>
       <plugin>
         <groupId>com.icfnext.documentation</groupId>
-        <artifactId>doocumentation-maven-plugin</artifactId>
+        <artifactId>documentation-maven-plugin</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <dependencies>
           <dependency>
